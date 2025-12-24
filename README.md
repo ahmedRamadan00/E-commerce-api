@@ -55,13 +55,6 @@ A complete Node.js RESTful API for an e-commerce platform built with Express.js 
 
 ---
 
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd nodejs-project
-
 ## 📚 API Endpoints
 
 ### Users
@@ -83,5 +76,4 @@ POST   /orders
 GET    /orders/:id  
 PUT    /orders/:id  
 DELETE /orders/:id  
-
 
