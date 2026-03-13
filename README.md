@@ -1,79 +1,84 @@
-# E-Commerce REST API
+# E-Commerce Project
 
-A complete Node.js RESTful API for an e-commerce platform built with Express.js and MongoDB.
+Full-stack e-commerce application with Node.js backend and React frontend.
 
-## 📋 Features
+## 📁 Structure
 
-- **User Management**: Create, read, update, and delete user accounts
-- **Product Catalog**: Full CRUD operations for products
-- **Order System**: Create and manage customer orders
-- **Validation**: Input validation using Mongoose schemas
-- **Error Handling**: Centralized error handling middleware
-- **RESTful Design**: Clean REST API structure
+```
+ecommerce/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── user.controller.js
+│   │   │   ├── product.controller.js
+│   │   │   └── order.controller.js
+│   │   ├── models/
+│   │   │   ├── user.model.js
+│   │   │   ├── product.models.js
+│   │   │   └── order.models.js
+│   │   └── routes/
+│   │       ├── user.route.js
+│   │       ├── product.route.js
+│   │       └── order.route.js
+│   ├── index.js
+│   ├── package.json
+│   └── .env
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   │   └── Sidebar.jsx
+    │   ├── pages/
+    │   │   ├── Dashboard.jsx
+    │   │   ├── ProductsPage.jsx
+    │   │   ├── UsersPage.jsx
+    │   │   └── OrdersPage.jsx
+    │   ├── services/
+    │   │   └── api.js
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   └── index.css
+    ├── index.html
+    ├── vite.config.js
+    ├── package.json
+    └── .env
+```
 
----
+## 🚀 Run the Project
 
-## 🛠️ Tech Stack
+### 1. Start MongoDB
+Make sure MongoDB is running locally on port 27017.
 
-- **Node.js**
-- **Express.js**
-- **MongoDB**
-- **Mongoose**
-- **dotenv**
+### 2. Start Backend
+```bash
+cd backend
+npm install
+npm run dev
+# → http://localhost:3000
+```
 
----
+### 3. Start Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+# → http://localhost:5173
+```
 
-## 📁 Project Structure
-├── src/
-│ ├── controllers/
-│ │ ├── user.controller.js
-│ │ ├── product.controller.js
-│ │ └── order.controller.js
-│ ├── models/
-│ │ ├── user.model.js
-│ │ ├── product.models.js
-│ │ └── order.models.js
-│ └── routes/
-│ ├── user.route.js
-│ ├── product.route.js
-│ └── order.route.js
-├── index.js
-├── package.json
-├── package-lock.json
-├── .env
-└── README.md
+## 🔗 API Endpoints
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- MongoDB (Local or MongoDB Atlas)
-- npm
-
----
-
-## 📚 API Endpoints
-
-### Users
-GET    /users  
-GET    /users/:id  
-POST   /users  
-PUT    /users/:id  
-DELETE /users/:id  
-
-### Products
-GET    /products  
-GET    /products/:id  
-POST   /products  
-PUT    /products/:id  
-DELETE /products/:id  
-
-### Orders
-POST   /orders  
-GET    /orders/:id  
-PUT    /orders/:id  
-DELETE /orders/:id  
-
+| Method | Endpoint        | Description        |
+|--------|-----------------|--------------------|
+| GET    | /users          | Get all users      |
+| POST   | /users          | Create user        |
+| GET    | /users/:id      | Get user by ID     |
+| PUT    | /users/:id      | Update user        |
+| DELETE | /users/:id      | Delete user        |
+| GET    | /products       | Get all products   |
+| POST   | /products       | Create product     |
+| GET    | /products/:id   | Get product by ID  |
+| PUT    | /products/:id   | Update product     |
+| DELETE | /products/:id   | Delete product     |
+| POST   | /orders         | Create order       |
+| GET    | /orders/:id     | Get order by ID    |
+| PUT    | /orders/:id     | Update order       |
+| DELETE | /orders/:id     | Delete order       |

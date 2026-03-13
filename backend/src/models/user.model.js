@@ -7,13 +7,13 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true , 'Email is required'],
-    unique: [true , "This email is already registered"],
+    required: [true, 'Email is required'],
+    unique: [true, "This email is already registered"],
     match: [/.+\@.+\..+/, 'Please fill a valid email address']
   },
   password: {
     type: String,
-    required: [true , 'Password is required'],
+    required: [true, 'Password is required'],
     match: [/(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/, 'Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit']
   },
   phoneNumber: {
